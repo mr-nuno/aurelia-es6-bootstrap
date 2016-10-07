@@ -1,0 +1,16 @@
+<template>
+  <table class="table table-striped">
+    <tbody>
+        <tr repeat.for="food of foods">
+          <td>${food.Id}</td>
+          <td>
+            
+            <a route-href="route: details; params.bind: {id:food.Id}" click.delegate="$parent.select(food)">
+              ${food.Name}
+            </a>
+            
+          </td>
+        </tr>
+    </tbody>    
+  </table>
+</template>

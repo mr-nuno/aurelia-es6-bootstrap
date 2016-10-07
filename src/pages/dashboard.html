@@ -1,0 +1,46 @@
+<template>
+  <require from="dragula/dragula.min.css"></require>
+  <require from="bootstrap-datepicker/css/bootstrap-datepicker.min.css"></require>
+  <require from="../components/drawing-pad"></require>
+  
+  <h2>Output</h2>
+  <img src.bind="image" alt="Signature" />
+
+  <h2>Dashboard</h2>
+  <drawing-pad></drawing-pad>
+  <drawing-pad></drawing-pad>
+  
+  <h2>Logga in</h2>
+  <form>
+    <div class="form-group">
+      <label for="username">Datum</label>
+      <input type="text" class="form-control datepicker" value.bind="date" placeholder="Välj ett datum">
+    </div>
+    <div class="form-group">
+      <label for="username">Email address</label>
+      <input type="email" class="form-control" value.bind="username" placeholder="Användarnamn">
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" class="form-control" value.bind="password" placeholder="Password">
+    </div>
+    <button type="button" class="btn btn-primary" click.trigger="login()">Logga in</button>
+  </form>
+  </div>
+  <div class="row">
+    <div ref="left" class="col-md-6 col-sm-6">
+      <div class="alert alert-success" role="alert">&nbsp;</div>
+      <div class="alert alert-success" role="alert">&nbsp;</div>
+      <div class="alert alert-success" role="alert">&nbsp;</div>
+      <div class="alert alert-success" role="alert">&nbsp;</div>
+      <div class="alert alert-success" role="alert">&nbsp;</div>
+    </div>
+    <div ref="right" class="col-md-6 col-sm-6">
+      <div class="alert alert-info" role="alert">&nbsp;</div>
+      <div class="alert alert-info" role="alert">&nbsp;</div>
+      <div class="alert alert-info" role="alert">&nbsp;</div>
+      <div class="alert alert-info" role="alert">&nbsp;</div>
+      <div class="alert alert-info" role="alert">&nbsp;</div>
+    </div>
+  </div>
+</template>
